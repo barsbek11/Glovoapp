@@ -1,0 +1,54 @@
+.modal-overlay {
+	@apply duration-[0.6s] transition-all delay-[0s] fixed z-[21] left-0 right-0 top-0 bottom-0 bg-[rgba(0,0,0,.6)] overflow-auto;
+	.modal-wrapper {
+		@apply absolute left-0 right-0 my-[10vh] mx-auto w-[800px] duration-[0.3s];
+		.modal--window {
+			@apply bg-white w-full rounded-[10px] overflow-hidden shadow-[0_2px_20px_12px_rgba(0,0,0,0.2)] relative;
+			.close-button {
+				@apply cursor-pointer float-right font-bold mr-[30px] mt-[30px] text-gray-600 z-[1];
+				position: inherit;
+				img {
+					@apply w-5 h-5;
+				}
+			}
+			.modal--window__body {
+				@apply box-border h-full pt-[72px] pb-0 px-12 bg-white;
+				.multi-step {
+					@apply h-full;
+					.location-container {
+						@apply relative min-h-full;
+						.modal--window__title {
+							@apply text-black font-bold text-3xl mb-10 mt-0 text-center;
+						}
+						.el-form {
+							.location-container__body {
+								@apply pb-[122px];
+								.container__fields {
+									@apply relative flex flex-col;
+									.el-form-item {
+										@apply mb-[22px];
+									}
+									.el-form-item::before {
+										@apply table before:content-[''];
+									}
+								}
+								.mt-1 {
+									margin-top: 10px !important;
+								}
+							}
+							.cols {
+								@apply flex flex-wrap -mx-[0.75%];
+								.col {
+									@apply m-[1.25%] box-border;
+								}
+								.col.one-half {
+									@apply w-[47.5%] flex-none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

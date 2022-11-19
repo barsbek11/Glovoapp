@@ -1,0 +1,12 @@
+section {
+	@apply h-[445px] bg-yellow-400;
+	.landing__jumbotron__container {
+		@apply bg-yellow-400;
+		.landing__address-input {
+			@apply flex items-center justify-center pb-5 pt-10;
+			h2 {
+				@apply text-2xl font-light;
+			}
+		}
+	}
+}

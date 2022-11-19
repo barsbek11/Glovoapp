@@ -1,0 +1,45 @@
+.header {
+	@apply sticky top-0 bg-yellow-400 h-[104px];
+	.header-layout {
+		.header-layout__top {
+			@apply flex justify-between pt-[30px] pl-[100px] pr-[100px];
+			.logo {
+				@apply w-[119px];
+				.glovo-logo {
+				}
+			}
+			.header-search {
+				.header-search__input {
+					@apply relative flex items-center w-[406px] h-[44px] bg-gray-50 rounded-[20px] justify-center;
+					.header-search__input__form {
+						@apply w-[390px] flex items-center justify-center bg-gray-50 relative;
+						.text-giant--header {
+							.text-giant {
+								@apply w-[400px] py-0 px-[45px] flex items-center bg-gray-50 outline-none;
+							}
+						}
+						.header-search__input__form-icon {
+							@apply flex;
+							svg {
+								@apply text-[#9b9b9b] top-[25%] absolute  left-[20px];
+							}
+						}
+					}
+				}
+			}
+			.header-layout__right {
+				.header-action {
+					.get-started-button {
+						@apply bg-[#00a082] w-[138px] h-11 rounded-full;
+						.helio-button__content {
+							@apply text-center font-bold text-sm text-white;
+						}
+					}
+					.get-started-button:hover {
+						@apply bg-[#107764];
+					}
+				}
+			}
+		}
+	}
+}
