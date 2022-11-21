@@ -93,6 +93,9 @@
 .corporate-element__link {
 	text-decoration: none;
 	width: 100%;
+	:hover {
+		background: #107764;
+	}
 }
 .helio-button {
 	cursor: pointer;
@@ -121,8 +124,6 @@
 	box-shadow: 0 3px 5px 0 #0000001a;
 	border: none;
 }
-.primary {
-	background-color: #107764;
-}
+
 .helio-button__content {
 }
