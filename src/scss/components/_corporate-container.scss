@@ -1,0 +1,128 @@
+.corporate-container {
+	border-image-source: url(https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/landing/waves/corporate-wave-desktop.svg);
+	background-clip: padding-box;
+	border-image-slice: 80 0 0;
+	border-top: 80px solid transparent;
+	background-color: #e9f8f5;
+	position: relative;
+	padding-bottom: 68px;
+	margin-bottom: -136px;
+}
+.corporate-container__icon {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -92%);
+}
+.corporate-container__wrapper {
+	padding-left: 7.5%;
+	padding-right: 7.5%;
+	margin: 0 auto;
+
+	max-width: calc(1124px + 15%);
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 80px;
+	margin-bottom: 100px;
+}
+.heading-h2 {
+	margin: 24px 0;
+	color: black;
+	display: flex;
+	align-items: center;
+}
+.corporate-container__title {
+	justify-content: center;
+	text-align: center;
+	margin-top: 32px;
+}
+.heading-h2--bigger {
+	font-size: 40px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+.corporate-container__content {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	gap: 64px 32px;
+	margin-top: 80px;
+	flex-wrap: wrap;
+}
+.corporate-element {
+	flex: 1 1 296px;
+	max-width: 356px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 24px;
+}
+.corporate-element__top {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+}
+.corporate-element__image {
+	width: 100%;
+	display: block;
+	height: auto;
+	max-width: 254px;
+}
+.corporate-element__text {
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.22;
+	font-weight: 300;
+}
+.corporate-element__title {
+	font-size: 24px;
+	line-height: 1.17;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+.corporate-element__description {
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.22;
+	font-weight: 300;
+}
+.corporate-element__link {
+	text-decoration: none;
+	width: 100%;
+}
+.helio-button {
+	cursor: pointer;
+	text-decoration: none;
+}
+.corporate-element__button {
+	min-width: 180px;
+	margin: 0 auto;
+}
+.primary {
+	position: relative;
+	text-align: center;
+	padding-left: 16px;
+	padding-right: 16px;
+	height: 48px;
+	border-radius: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-family: 'Gotham', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-display: fallback;
+	font-weight: 700;
+	background-color: #00a082;
+	color: white;
+	box-shadow: 0 3px 5px 0 #0000001a;
+	border: none;
+}
+.primary {
+	background-color: #107764;
+}
+.helio-button__content {
+}

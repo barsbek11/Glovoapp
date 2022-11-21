@@ -1,0 +1,9 @@
+.current-location {
+	@apply text-center text-sm font-normal gap-x-2 flex items-center justify-center text-[#31b29a];
+	img {
+		@apply w-8 h-8 cursor-pointer m-0;
+	}
+	.current-location__text {
+		@apply m-0 cursor-pointer font-semibold;
+	}
+}

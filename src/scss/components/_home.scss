@@ -1,11 +1,73 @@
-section {
-	@apply h-[445px] bg-yellow-400;
+.landing__jumbotron {
+	@apply flex bg-[#ffc244] pb-16 overflow-hidden relative flex-col;
+	.city-highlights__curve {
+		position: absolute;
+		width: 100%;
+		object-fit: cover;
+		height: 45px;
+		bottom: -100px;
+	}
 	.landing__jumbotron__container {
-		@apply bg-yellow-400;
-		.landing__address-input {
-			@apply flex items-center justify-center pb-5 pt-10;
-			h2 {
-				@apply text-2xl font-light;
+		@apply min-w-0 m-auto;
+		.landing__city-picker {
+			@apply flex flex-col m-12 text-center text-4xl;
+			.landing__city {
+				.title {
+					@apply text-black text-[50px] leading-[50px] m-0 text-center font-semibold;
+				}
+			}
+		}
+		.address-container {
+			@apply flex mt-10 mb-5 justify-center;
+			.address-container__input-wrapper {
+				@apply w-full max-w-[540px] flex flex-col gap-x-4 relative items-center;
+				.address-input__wrapper {
+					@apply block relative w-[548px] max-w-full h-[50px];
+					.address-input {
+						@apply h-[50px] relative block w-full max-w-[540px];
+						.address-input__container {
+							@apply flex h-[50px] rounded-[8px] items-center text-base leading-[1.4] font-light w-full bg-white max-w-[540px];
+							.address-input__container__icon {
+								@apply bg-[#00a082] rounded-tl-lg rounded-tr-[0px] rounded-br-[0px] rounded-bl-lg h-full w-[50px] flex justify-center;
+								.address-input__container__icon__image {
+									@apply w-6 border-none;
+								}
+							}
+							.address-input__container__input {
+								@apply text-gray-300 px-3 py-0 leading-[1.4];
+							}
+						}
+					}
+					.current-location {
+						@apply absolute top-[8.5px] right-14;
+					}
+				}
+			}
+		}
+	}
+}
+
+.landing__categories {
+	@apply min-h-[260px] justify-center flex-row flex flex-wrap mx-auto my-0 items-center;
+	.category-bubble {
+		@apply shadow-none border-none select-none h-[114.2px] w-[114.2px] m-2;
+		.category-bubble-link {
+			@apply flex flex-col justify-center items-center p-0 bg-white rounded-[100%] cursor-pointer border-none select-none shadow-[0_2px_17px_0_#e19f17] h-full w-full text-center transition-[0.3s] no-underline text-black;
+			.category-bubble-icon {
+				animation-delay: 0.2s;
+				height: 60px;
+			}
+			.category-bubble-title {
+				@apply my-2 mx-auto w-[88px] overflow-hidden text-xs leading-[1.14] font-light max-h-[35px];
+				animation-delay: 0.3s;
+			}
+		}
+		.category-bubble-link--bounce-in {
+			animation-duration: 0.3s;
+			animation-fill-mode: backwards;
+			.fadeIn {
+				animation-duration: 0.3s;
+				animation-fill-mode: both;
 			}
 		}
 	}

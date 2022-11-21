@@ -1,10 +1,16 @@
 // import { FaAngleDown } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
+import { CorparateContainer } from '../components/corporate-container'
+import { CurrentLocation } from '../components/currentLocation'
+import { HomeItems } from '../components/homeItems'
 import { LandingAddress } from '../components/landingAddress'
-import { setOpened } from '../redux/slices/glovoSlice'
+import { LandingLinks } from '../components/landingLinks'
+import { setLandingAddressOpened } from '../redux/slices/glovoSlice'
 
 export const Home = () => {
-	const opened = useSelector(state => state.glovo.opened)
+	const landingAddressOpened = useSelector(
+		state => state.glovo.landingAddressOpened
+	)
 	const dispatch = useDispatch()
 
 	return (
@@ -14,9 +20,7 @@ export const Home = () => {
 					<div className='landing__city-picker'>
 						<h1 className='landing__city'>
 							<span className='title title--inverted'>
-								<span className='title__city'>
-									Доставка в городе БишкекName
-								</span>
+								<span className='title__city'>Доставка в городе Бишкек</span>
 							</span>
 						</h1>
 					</div>
@@ -26,23 +30,14 @@ export const Home = () => {
 					>
 						<div className='address-container__input-wrapper'>
 							<div className='address-input__wrapper address-input__wrapper--fixed'>
-								<div
-									data-test-id='address-input-title'
-									className='address-input__title'
-									// style='animation-duration: 200ms;'
-								>
-									<span>
-										Введите ваш адрес, чтобы увидеть
-										<br className='visible-mobile' />
-										<span className='v-highlight v-highlight--white  v-highlight--medium v-highlight--undefined'>
-											<mark className='v-highlight-text v-highlight-text--medium'>
-												<span>заведения возле вас</span>
-											</mark>
-										</span>
-									</span>
-								</div>{' '}
 								<div className='address-input'>
-									<div className='address-input__container'>
+									<LandingAddress />
+									<div
+										className='address-input__container'
+										onClick={() =>
+											dispatch(setLandingAddressOpened(!landingAddressOpened))
+										}
+									>
 										<div className='address-input__container__icon'>
 											<img
 												src='https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/icons/flag--white.svg'
@@ -51,44 +46,26 @@ export const Home = () => {
 												className='address-input__container__icon__image'
 											/>
 										</div>
-										<div
-											data-test-id='address-input-placeholder'
-											className='address-input__container__input'
-										>
-											<span className='address-input__container__input--blinking'>
-												|
-											</span>
+										<div className='address-input__container__input'>
 											Укажите ваш адрес
 										</div>
 									</div>
 								</div>
-							</div>
-							<div className='current-location-wrapper'>
-								<div>
-									<div className='current-location current-location--insideAddressInput'>
-										<img
-											loading='lazy'
-											src='https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/svg/location.svg'
-										/>
-										<div className='current-location__text'>
-											Name Текущее местоположение
-										</div>
-									</div>
-								</div>
+								<CurrentLocation className='current-location' />
 							</div>
 						</div>
 					</div>
 					<div>
-						<section data-test-id='bubbles-desktop'>
+						<section>
 							<div
 								className='landing__categories'
-								// style='max-width:650px;'
+								style={{ maxWidth: '650px' }}
 							>
 								<div className='category-bubble'>
 									<a
 										href='/kg/ru/bishkek/restorany_1/'
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:0.5s;'
+										style={{ animationDelay: '0.5s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/StoreCategories/prj0mlcuvmymzfh8pqjz'
@@ -103,12 +80,12 @@ export const Home = () => {
 								<div className='category-bubble'>
 									<button
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:0.6s;'
+										style={{ animationDelay: '0.6s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/CategoryGroups/bn3rkdoqc98taxkpfvx1'
 											alt='Супермаркеты'
-											class='category-bubble-icon fadeIn'
+											className='category-bubble-icon fadeIn'
 											width='60'
 											height='60'
 										/>
@@ -116,53 +93,11 @@ export const Home = () => {
 											Супермаркеты
 										</span>
 									</button>
-									<div
-										className='modal-wrapper bubble-modal'
-										// style='display: none; top: -92px; left: 560.8px;'
-									>
-										<div className='bubble-modal__background'></div>
-										<div className='bubble-modal__container'>
-											<div id='focusGuardStart' tabindex='0'></div>
-											<div className='bubble-modal__background--bubbles'>
-												<div
-													className='bubble-modal__category-bubble-container'
-													// style='transform: rotate(0deg) translate(110px) rotate(0deg);'
-												>
-													<div className='category-bubble' tabindex='0'>
-														<a
-															href='/kg/ru/bishkek/supermarkety_4/'
-															className='category-bubble-link'
-														>
-															<h2 className='category-bubble-title fadeIn'>
-																Супермаркеты
-															</h2>
-														</a>
-													</div>
-												</div>
-												<div
-													className='bubble-modal__category-bubble-container'
-													// style='transform: rotate(180deg) translate(110px) rotate(-180deg);'
-												>
-													<div className='category-bubble' tabindex='0'>
-														<a
-															href='/kg/ru/bishkek/alkogol-i-tabak_6568/'
-															className='category-bubble-link'
-														>
-															<h2 className='category-bubble-title fadeIn'>
-																Алкоголь и табак
-															</h2>
-														</a>
-													</div>
-												</div>
-												<div id='focusGuardEnd' tabindex='0'></div>
-											</div>
-										</div>
-									</div>
 								</div>
 								<div className='category-bubble'>
 									<button
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:0.7s;'
+										style={{ animationDelay: '0.7s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/StoreCategories/yn87iqomg2p9h5bwpssz'
@@ -177,7 +112,7 @@ export const Home = () => {
 								<div className='category-bubble'>
 									<button
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:0.8s;'
+										style={{ animationDelay: '0.8s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/StoreCategories/o2g7fmssjbb4cvpqu1jz'
@@ -195,7 +130,7 @@ export const Home = () => {
 									<a
 										href='/kg/ru/bishkek/zdorove-i-krasota_2282/'
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:0.9s;'
+										style={{ animationDelay: '0.9s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/StoreCategories/ifast9tndsmzlufjlhzq'
@@ -212,9 +147,8 @@ export const Home = () => {
 								<div className='category-bubble'>
 									<a
 										href='/kg/ru/bishkek/krasniy-polumesyac-bsk/'
-										data-test-id='category-bubble'
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:1s;'
+										style={{ animationDelay: '1s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/StoreCategories/ga9sr6rgcxhsjycy8vzy'
@@ -232,12 +166,12 @@ export const Home = () => {
 									<a
 										href='/kg/ru/bishkek/shops-gifts_1132/'
 										className='category-bubble-link category-bubble-link--bounce-in'
-										// style='animation-delay:1.1s;'
+										style={{ animationDelay: '1.1s' }}
 									>
 										<img
 											src='https://res.cloudinary.com/glovoapp/w_60,h_60,c_fit,f_auto,q_auto:best/CategoryGroups/gvzyon4wmct0wn9caj6w'
 											alt='магазины и подарки'
-											class='category-bubble-icon fadeIn'
+											className='category-bubble-icon fadeIn'
 											width='60'
 											height='60'
 										/>
@@ -251,6 +185,9 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
+			<HomeItems />
+			<LandingLinks />
+			<CorparateContainer />
 		</>
 	)
 }

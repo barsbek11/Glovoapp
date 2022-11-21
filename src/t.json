@@ -1,0 +1,112 @@
+[
+	{
+		"title": "Kulikov",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/mjw167vgqasmtvwrvdpk",
+		"rating": "92%",
+		"ratingCount": "(33)",
+		"price": "90,00",
+		"timeDelivery": "25-45 мин.",
+		"link": "/kg/ru/bishkek/kulikov"
+	},
+
+	{
+		"title": "KFC",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/ghqkiivwdclh4uheoaf6",
+		"rating": "91%",
+		"ratingCount": "500+",
+		"price": "115,00",
+		"timeDelivery": "30-50 мин.",
+		"link": "/kg/ru/bishkek/kfc"
+	},
+	{
+		"title": "Daamduu - Восток 5",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/yonscoj8gqizksdbn2eb",
+		"rating": "92%",
+		"ratingCount": "(292)",
+		"price": "130,00",
+		"timeDelivery": "30-40 мин.",
+		"link": "/kg/ru/bishkek/daamduu-vostok-5"
+	},
+
+	{
+		"title": "Дасторкон Фаст фуд",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/opgzf0hdinoy2jrdalsf",
+		"rating": "95%",
+		"ratingCount": "(118)",
+		"price": "130,00",
+		"timeDelivery": "35-45 мин.",
+		"link": "/kg/ru/bishkek/dastorkon-fast-food"
+	},
+	{
+		"title": "Begemot",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/pdcfvr6qrppk6qynhym3",
+		"rating": "91%",
+		"ratingCount": "(355)",
+		"price": "130,00",
+		"timeDelivery": "30-40 мин.",
+		"link": "/kg/ru/bishkek/begemot"
+	},
+
+	{
+		"title": "Кондитерский дом «Графский»",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/dch47s87omnw4covxnl6",
+		"rating": "--",
+		"price": "90,00",
+		"timeDelivery": "35-45 мин.",
+		"link": "/kg/ru/bishkek/konditerskiy-dom-grafskiy"
+	},
+	{
+		"title": "SIERRA",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/hizw8kjr5egmfmseb4hb",
+		"rating": "92%",
+		"ratingCount": "(100)",
+		"price": "130,00",
+		"timeDelivery": "40-50 мин.",
+		"link": "/kg/ru/bishkek/sierra"
+	},
+
+	{
+		"title": "Оазис",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rydxfeafpq9ihtenrksq",
+		"rating": "81%",
+		"ratingCount": "(12)",
+		"price": "115,00",
+		"timeDelivery": "40-60 мин.",
+		"link": "/kg/ru/bishkek/oazis"
+	},
+	{
+		"title": "Adriano Coffee",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/u6b6xbgqot2pxzok9e5b",
+		"rating": "91%",
+		"ratingCount": "(157)",
+		"price": "130,00",
+		"timeDelivery": "45-55 мин.",
+		"link": "/kg/ru/bishkek/adriano-coffe"
+	},
+
+	{
+		"title": "Lart restaurant",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/cscnb9wjo5rtqoasnwas",
+		"rating": "--",
+		"price": "130,00",
+		"timeDelivery": "35-55 мин.",
+		"link": "/kg/ru/bishkek/lart-restaurant"
+	},
+	{
+		"title": "Domino pizza",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/hizw8kjr5egmfmseb4hb",
+		"rating": "99%",
+		"ratingCount": "(19)",
+		"price": "130,00",
+		"link": "/kg/ru/bishkek/domino-pizza"
+	},
+
+	{
+		"title": "Papa Johns",
+		"backgroundImage": "https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/nty5dey2smfrf1zptqbk",
+		"rating": "96%",
+		"ratingCount": "(126)",
+		"price": "130,00",
+		"link": "/kg/ru/bishkek/papa-johns"
+	}
+]

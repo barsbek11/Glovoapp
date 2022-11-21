@@ -3,7 +3,7 @@
 	.modal-wrapper {
 		@apply absolute left-0 right-0 my-[10vh] mx-auto w-[800px] duration-[0.3s];
 		.modal--window {
-			@apply bg-white w-full rounded-[10px] overflow-hidden shadow-[0_2px_20px_12px_rgba(0,0,0,0.2)] relative;
+			@apply bg-white w-full rounded-[10px] overflow-hidden shadow-[0_2px_20px_12px_rgba(0,0,0,0.2)] relative mb-[10vh];
 			.close-button {
 				@apply cursor-pointer float-right font-bold mr-[30px] mt-[30px] text-gray-600 z-[1];
 				position: inherit;
@@ -24,12 +24,76 @@
 							.location-container__body {
 								@apply pb-[122px];
 								.container__fields {
-									@apply relative flex flex-col;
+									@apply relative flex flex-col h-[340px] mr-7;
 									.el-form-item {
 										@apply mb-[22px];
+										.el-form-item__content {
+											@apply leading-10 relative text-sm;
+											.text-field {
+												@apply flex mb-5 relative;
+												.text-field__icon {
+													@apply w-[30px] max-h-[30px] mr-3 mt-[5px];
+												}
+												.text-field__input {
+													@apply w-full h-11 border-b-[1px] border-b-gray-400 overflow-hidden;
+												}
+												.el-autocomplete {
+													@apply relative inline-block;
+													.el-input {
+														@apply relative inline-block text-sm w-full;
+														.el-input__inner {
+															@apply pr-3 w-full text-black text-lg font-light border-none border-b-2 border-b-gray-600 rounded-none pt-0 pb-[7px] outline-none h-10;
+															input {
+																@apply border-b-2 border-b-gray-600;
+															}
+														}
+													}
+												}
+												.placeholder {
+													@apply ml-10 text-gray-600 absolute text-lg top-[7px] leading-[1.33] transition-[0.3s] left-0 right-0 overflow-hidden whitespace-nowrap text-ellipsis;
+												}
+											}
+										}
+										.el-form-item__content::after {
+											@apply table before:content-[''] clear-both;
+										}
+										.el-form-item__content::before {
+											@apply table before:content-[''];
+										}
 									}
 									.el-form-item::before {
 										@apply table before:content-[''];
+									}
+									.el-form-item::after {
+										@apply table before:content-[''] clear-both;
+									}
+									.location-form__use-current-location {
+										@apply -mt-5 self-center;
+									}
+									.current-location-wrapper {
+										@apply min-h-[32px];
+										div {
+											.current--location {
+												@apply text-center text-sm font-normal gap-x-2 flex items-center justify-center text-[#31b29a];
+												img {
+													@apply w-8 h-8 cursor-pointer m-0;
+												}
+												.current--location__text {
+													@apply m-0 cursor-pointer font-semibold;
+												}
+											}
+										}
+									}
+									.location-form__link {
+										@apply absolute left-0 right-0 bottom-0 ml-10 flex;
+										.link {
+											@apply text-sm font-semibold text-[#00a082] no-underline transition-[0.3s] cursor-pointer;
+										}
+									}
+									.button-link {
+										.button-link--content {
+											@apply whitespace-nowrap overflow-hidden text-ellipsis;
+										}
 									}
 								}
 								.mt-1 {

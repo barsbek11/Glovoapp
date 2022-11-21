@@ -23,24 +23,23 @@ export const Header = () => {
 									className='glovo-logo__text--green'
 								></path>
 								<path
-									data-v-020e8c21=''
 									fill='#00A082'
 									d='m90.661 9.961-.2.28-2.751 3.897-2.748-3.89-.201-.282a3.648 3.648 0 0 1 2.949-5.781 3.65 3.65 0 0 1 2.95 5.776M87.711.639c-3.956 0-7.171 3.23-7.171 7.199 0 1.511.468 2.962 1.351 4.195l.19.266 3.735 5.288s.455.747 1.448.747h.892c.995 0 1.448-.747 1.448-.747l3.732-5.289.19-.266a7.155 7.155 0 0 0 1.352-4.195c0-3.969-3.217-7.198-7.17-7.198M85.692 21.58v-.014c0-1.076.851-1.966 2-1.966 1.15 0 1.994.876 1.994 1.952v.014c0 1.067-.852 1.957-2.008 1.957-1.14 0-1.986-.875-1.986-1.943'
-									class='glovo-logo__balloon--green'
+									className='glovo-logo__balloon--green'
 								></path>
 							</svg>
 						</a>
 						<div className='header-search'>
 							<div className='header-search__input'>
 								<form role='search' className='header-search__input__form'>
-									<div class='text-giant--header'>
-										<label for='search' class='visuallyHidden'></label>
+									<div className='text-giant--header'>
+										<label htmlFor='search' className='visuallyHidden'></label>
 										<span className='header-search__input__form-icon'>
 											<BiSearch />
 										</span>
 										<input
 											id='search'
-											autocomplete='off'
+											autoComplete='off'
 											placeholder='Искать'
 											className='text-giant'
 										/>

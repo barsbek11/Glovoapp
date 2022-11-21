@@ -1,5 +1,5 @@
 .header {
-	@apply sticky top-0 bg-yellow-400 h-[104px];
+	@apply sticky top-0 bg-[#ffc244] h-[104px] z-10;
 	.header-layout {
 		.header-layout__top {
 			@apply flex justify-between pt-[30px] pl-[100px] pr-[100px];

@@ -2,9 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   activeCategory: 0,
-	activeSort: { name: "popularity ⬆", sortProperty: "rating" },
+	activeSort: '',
   loading:true,
-  opened:false,
+  landingAddressOpened:false,
+  items: []
+
 }
 
 export const glovoSlice = createSlice({
@@ -21,12 +23,15 @@ export const glovoSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload
     },
-    setOpened: (state, action) => {
-      state.opened = action.payload
+    setLandingAddressOpened: (state, action) => {
+      state.landingAddressOpened = action.payload
+    },
+    setItems: (state, action) => {
+      state.items = action.payload
     }
   },
 })
 
-export const { setCategoryId, setActiveSortId, setLoading, setOpened } = glovoSlice.actions
+export const { setCategoryId, setActiveSortId, setLoading, setLandingAddressOpened, setItems } = glovoSlice.actions
 
 export default glovoSlice.reducer

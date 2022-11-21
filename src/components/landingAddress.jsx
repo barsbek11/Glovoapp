@@ -1,21 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { setOpened } from '../redux/slices/glovoSlice'
+import { setLandingAddressOpened } from '../redux/slices/glovoSlice'
 
 export const LandingAddress = () => {
-	const opened = useSelector(state => state.glovo.opened)
+	const landingAddressOpened = useSelector(
+		state => state.glovo.landingAddressOpened
+	)
+
 	const dispatch = useDispatch()
 
 	return (
 		<>
-			{opened && (
+			{landingAddressOpened && (
 				<div className='modal-overlay'>
 					<div className='modal-wrapper'>
 						<div className='modal--window'>
 							<span
 								className='close-button'
-								onClick={() => dispatch(setOpened(false))}
+								onClick={() =>
+									dispatch(setLandingAddressOpened(!landingAddressOpened))
+								}
 							>
-								<img src='https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/close-icon.svg' />
+								<img
+									alt=''
+									src='https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/close-icon.svg'
+								/>
 							</span>
 							<div className='modal--window__body'>
 								<div className='multi-step'>
@@ -30,15 +38,15 @@ export const LandingAddress = () => {
 														<div className='el-form-item__content'>
 															<div
 																id='address-input'
-																className='address-input text-field pb-1'
+																className='address-input text-field pb-[10px]'
 															>
 																<img
 																	src='https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/flag_dark-grey.svg'
 																	className='text-field__icon'
+																	alt=''
 																/>
 																<div
 																	aria-haspopup='listbox'
-																	role='combobox'
 																	aria-owns='el-autocomplete-8996'
 																	className='el-autocomplete address-input__autocomplete text-field__input wide-autocomplete hide-suggestions'
 																>
@@ -51,70 +59,45 @@ export const LandingAddress = () => {
 																			debounce='300'
 																			placement='bottom-start'
 																			className='el-input__inner'
-																			role='textbox'
 																			aria-autocomplete='list'
 																			aria-controls='id'
 																			aria-activedescendant='el-autocomplete-8996-item--1'
+																			placeholder='Поиск улицы, города, района...'
 																		/>
 																	</div>
-																	<div
-																		role='region'
-																		className='el-autocomplete-suggestion el-popper popper-absolute flex-none'
-																	>
-																		<div className='el-scrollbar '>
-																			<div className='el-autocomplete-suggestion__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default'>
-																				<ul
-																					className='el-scrollbar__view el-autocomplete-suggestion__list'
-																					role='listbox'
-																					id='el-autocomplete-8996'
-																				></ul>
-																			</div>
-																			<div className='el-scrollbar__bar is-horizontal'>
-																				<div className='el-scrollbar__thumb translate-x-[0%]'></div>
-																			</div>
-																			<div className='el-scrollbar__bar is-vertical'>
-																				<div className='el-scrollbar__thumb translate-y-[0%]'></div>
-																			</div>
-																		</div>
-																	</div>
 																</div>
-																<span className='placeholder'>
-																	Поиск улицы, города, района...
-																</span>
 															</div>
 														</div>
 													</div>
 													<div className='current-location-wrapper location-form__use-current-location'>
 														<div>
-															<div className='current-location'>
+															<div className='current--location'>
 																<img
 																	loading='lazy'
 																	src='https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/svg/location.svg'
+																	alt=''
 																/>
-																<div className='current-location__text'>
+																<div className='current--location__text'>
 																	Текущее местоположение
 																</div>
 															</div>
 														</div>
 													</div>
-													<div className='button-link location-form__link hidden-mobile default'>
-														<a
-															data-test-id='button-link-content'
-															className='button-link--content link default'
+													<div className='button-link location-form__link '>
+														<span
+															className='button-link--content link '
+															onClick={() => dispatch()}
 														>
 															Или укажите свое местоположение на карте
-														</a>
+														</span>
 													</div>
 												</div>
 												<div className='container__map col one-half full-width--mobile custom-margins mt-0'>
-													<div
-														data-test-id='location-form-map'
-														className='location-map right map-size-mobile-small hidden-mobile'
-													>
+													<div className='location-map right w-[308px] h-[308px]'>
 														<img
-															data-test-id='location-map-placeholder'
 															src='https://res.cloudinary.com/glovoapp/image/fetch//f_auto,q_auto/https://glovoapp.com/images/map-placeholder.jpg'
-															className='location-map fluid'
+															className='location-map h-[308px]'
+															alt=''
 														/>
 													</div>
 												</div>
