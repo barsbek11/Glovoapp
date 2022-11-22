@@ -1,0 +1,144 @@
+.app-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #1d1d1dff;
+	margin-top: 68px;
+	z-index: 400;
+	border-image-source: url(https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/landing/footer-wave-desktop.svg);
+	background-clip: padding-box;
+	border-image-slice: 68 0 0;
+	border-top: 68px solid transparent;
+	position: absolute;
+	width: 100%;
+}
+.hidden-mobile-when-search {
+}
+.app-footer__container {
+	padding-left: 7.5%;
+	padding-right: 7.5%;
+	margin: 0 auto;
+	max-width: calc(1124px + 15%);
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 100px;
+}
+.footer-logo {
+	cursor: pointer;
+	max-width: 100px;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 2.96875;
+	margin: 16px 0;
+}
+.app-footer__grid {
+	display: grid;
+	grid-auto-columns: minmax(120px, 200px);
+	grid-auto-flow: column;
+	justify-content: space-between;
+	padding: 16px 0 32px;
+	.footer-column {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		.footer-column__title {
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 700;
+			margin-bottom: 16px;
+			color: white;
+		}
+	}
+}
+.footer-column__link {
+	display: block;
+	margin: 4px 0 16px;
+	color: #f4f4f4ff;
+	font-size: 14px;
+	line-height: 1.29;
+	font-weight: 300;
+	text-decoration: none;
+}
+.footer-interlinks {
+	flex-direction: column;
+	display: flex;
+}
+
+.footer-interlinks__section {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 32px;
+}
+.footer-interlinks__section-title {
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 700;
+	margin-bottom: 16px;
+	color: white;
+}
+.footer-interlinks__links {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 4px 0 16px;
+	gap: 12px 24px;
+}
+.footer-interlinks__link-container {
+	.footer-interlinks__link {
+		font-size: 14px;
+		line-height: 1.29;
+		font-weight: 300;
+		text-decoration: none;
+		display: inline-block;
+		color: #e4e4e4ff;
+	}
+}
+.footer-interlinks__link-container--line-break {
+	width: 100%;
+}
+.footer-column-with-downloads {
+}
+.app-footer__column-with-downloads--desktop {
+}
+.footer-column--with-download-buttons {
+}
+.footer-column-with-downloads__button-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.footer-column-with-downloads__button {
+	margin-bottom: 24px;
+	padding-bottom: 4px;
+}
+.footer-column-with-downloads__image {
+}
+.app-footer__interlinks--desktop {
+}
+.language-picker {
+}
+.picker__trigger {
+}
+.el-select {
+}
+.el-input {
+}
+.el-input--suffix {
+}
+.el-input__inner {
+}
+.el-input__suffix {
+}
+.el-input__suffix-inner {
+}
+.el-select__caret {
+}
+.el-input__icon {
+}
+.el-icon-arrow-up {
+}
+.crawlers-alternative {
+}
+.nuxt-link-exact-active {
+}
+.nuxt-link-active {
+}

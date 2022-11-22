@@ -1,19 +1,26 @@
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { SearchContext } from '../App'
 import { setItems } from '../redux/slices/glovoSlice'
 import { CardOvelay } from './card-ovelay'
+
+const URL = process.env.REACT_APP_API_URL
 
 export const HomeItems = () => {
 	const items = useSelector(state => state.glovo.items)
 	const dispatch = useDispatch()
+
+	const { searchValue } = useContext(SearchContext)
+	const searchRequest = searchValue ? `&search=${searchValue}` : ''
+
+	// ${categoryBy}&sortBy=${sortBy}&order=${orderBy}&page=${currentPage}&limit=3
+
 	useEffect(() => {
-		axios
-			.get(`https://637b0d8a10a6f23f7f9e4b75.mockapi.io/store-card`)
-			.then(res => {
-				dispatch(setItems(res.data))
-			})
+		axios.get(`${URL}?${searchRequest}`).then(res => {
+			dispatch(setItems(res.data))
+		})
 	}, [])
 
 	const products = items.map(obj => <CardOvelay key={obj.id} {...obj} />)

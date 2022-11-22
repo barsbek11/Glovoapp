@@ -1,6 +1,23 @@
+import debounce from 'lodash.debounce'
+import { useCallback, useContext, useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
+import { SearchContext } from '../App'
 
 export const Header = () => {
+	const [value, setValue] = useState('')
+	const { setSearchValue } = useContext(SearchContext)
+
+	const updateSearchValue = useCallback(
+		debounce(str => {
+			setSearchValue(str)
+		}, 500),
+		[]
+	)
+
+	const changeInputValue = e => {
+		updateSearchValue(e.target.value)
+		setValue(e.target.value)
+	}
 	return (
 		<>
 			<header className='header'>
@@ -42,6 +59,8 @@ export const Header = () => {
 											autoComplete='off'
 											placeholder='Искать'
 											className='text-giant'
+											value={value}
+											onChange={changeInputValue}
 										/>
 									</div>
 								</form>

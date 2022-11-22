@@ -5,7 +5,9 @@ const initialState = {
 	activeSort: '',
   loading:true,
   landingAddressOpened:false,
-  items: []
+  items: [],
+  searchResultOpened: false,
+  home: true
 
 }
 
@@ -28,10 +30,16 @@ export const glovoSlice = createSlice({
     },
     setItems: (state, action) => {
       state.items = action.payload
+    },
+    setSearchResultOpened: (state, action) => {
+      state.searchResultOpened = action.payload
+    },
+    setHome: (state, action) => {
+      state.home = action.payload
     }
   },
 })
 
-export const { setCategoryId, setActiveSortId, setLoading, setLandingAddressOpened, setItems } = glovoSlice.actions
+export const { setCategoryId, setActiveSortId, setLoading, setLandingAddressOpened, setItems, setSearchResultOpened, setHome } = glovoSlice.actions
 
 export default glovoSlice.reducer
